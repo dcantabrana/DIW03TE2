@@ -1,8 +1,8 @@
 {
     "liveSassCompile.settings.formats":[
     {
-    "extensionName": ".css",
-    "format": "nested",
+    "extensionName": ".min.css",
+    "format": "compressed",
     "savePath": "/css"
     }
     ],

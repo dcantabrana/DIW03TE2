@@ -48,6 +48,7 @@
     }
 }
 
+//Añado el contenedor en el mixin y dentro de este el ul le pongo horizontal y centrao con otro mixin que habia creado.
 @mixin tarea(){
     @include contenedor;
     ul{
