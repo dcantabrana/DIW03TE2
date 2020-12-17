@@ -1,0 +1,64 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: $blanco;
+  font-size: $size_base;
+  color: $negro;
+}
+
+h1, h2, h3 {
+  margin: 0 0 20px 0;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  font-size: $size_base + 5px;
+}
+
+h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  
+}
+
+
+/* Estilos básicos para enlaces
+ */
+
+a {
+  color: $negro;
+  text-decoration: none;
+
+  &:hover {
+    color: $negro;
+    text-decoration: underline;
+  }
+}
+
+p {
+  font-size: $size_base;
+  
+  a {
+      color: $link;
+  }
+
+  a:hover {
+    color: $link_hover;
+    transition: 1s;
+  }
+}
+
+img {
+  -webkit-transition: width 1s; /* Safari */
+  transition: width 1s;
+}
+
+button:focus {
+  outline: 0px dotted;
+  outline: 0px auto -webkit-focus-ring-color;
+}

@@ -1,0 +1,56 @@
+
+// Para centrar el contenido vertical y horizontalmente
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+// Para centrar el contenido vertical
+
+@mixin vertica_center {
+    display: flex;
+    align-items: center;
+}
+
+
+// Para centrar el contenido horizontalmente
+
+@mixin horizontal_center {
+    display: flex;
+    justify-content: center;
+} 
+
+@mixin contenedor() {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (min-width: 100px) {max-width: 100%;}
+    @media (min-width: 576px) {max-width: 540px;}
+    @media (min-width: 768px) {max-width: 720px;}
+    @media (min-width: 992px) { max-width: 960px;}
+    @media (min-width: 1200px) {max-width: 1140px;}
+}
+
+
+@mixin header($header: h2){
+    
+    @if $header == h2 {
+        color: $corporativo;
+        font-weight: 400;
+        font-size: 27px;
+    }
+}
+
+@mixin tarea(){
+    @include contenedor;
+    ul{
+        @include horizontal_center;
+    }
+}

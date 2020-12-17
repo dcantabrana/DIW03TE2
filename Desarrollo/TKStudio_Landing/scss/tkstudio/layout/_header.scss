@@ -1,0 +1,58 @@
+section#cabecera {
+    background: url(../img/fondo.png) no-repeat $corporativo;
+    color: $blanco;
+    padding: 25px 0;
+
+    header {
+        @include contenedor;
+        
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+
+            li {
+                margin: 5px;
+
+                a {
+                    color: $blanco;
+                }
+            }
+        }
+    }
+
+    #mensaje {
+        @include contenedor;
+
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+        article {
+            color: $blanco;
+            @include vertica_center;
+
+            div {
+                width: 70%;
+
+                h2 {
+                    font-size: $size_base + 30;
+                    font-weight: 300;
+                }
+    
+                p {
+                    font-size: $size_base;
+                    line-height: 21px;
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+

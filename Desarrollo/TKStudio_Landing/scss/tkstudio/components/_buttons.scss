@@ -1,0 +1,46 @@
+.btn{
+    display: inline-block;
+    font-weight: 400;
+    color: $blanco;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 10px 25px;
+    font-size: $size_base;
+    border-radius: $input_border_radius;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        -webkit-border-radius: $input_border_radius;
+        -moz-border-radius: $input_border_radius;
+        -ms-border-radius: $input_border_radius;
+        -o-border-radius: $input_border_radius;
+
+    &:hover {
+        color: $blanco;
+        text-decoration: none;
+    }
+
+    &-comun{
+        @extend .btn;
+        background: $corporativo;
+        border: $trazo_base  solid $corporativo;
+        &:hover {
+            background: $link_hover;   
+        }
+    }
+    
+    // Este es el boton de arriba que es transparente, con exten traemos las propiedades en comun con todos los botones y luego añado lo que es exclusivo para este boton. He puesto tmb un margin porque se quedaba pegado al texto.
+    &-outline{
+        @extend .btn;
+        background: none;
+        border: $trazo_base  solid $blanco;
+        margin: 10px 0px;
+        &:hover {
+            background: $link_hover;
+            background: rgba($blanco,.1);   
+        }
+    }
+
+}

@@ -1,0 +1,186 @@
+#conocenos {
+    @include contenedor;
+    text-align: center;
+    padding: 70px 0;
+
+    h2 {
+        @include header(h2);
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    @media (min-width: 100px) {max-width: 90%;}
+    @media (min-width: 576px) {max-width: 90%;}
+    @media (min-width: 768px) {max-width: 650px;}
+    @media (min-width: 992px) { max-width: 650px;}
+    @media (min-width: 1200px) {max-width: 650px;}
+}
+
+#mas_de {
+    // Este es el mixins que he creado
+    @include tarea;
+    background: $gris;
+    
+    ul {
+        padding: 111px;
+
+
+        li {
+            padding: 0 25px;
+            text-align: center;
+            border-right: 1px solid $gris_oscuro;
+
+
+
+            h3 {
+                color: $corporativo;
+                font-weight: 900;
+                font-size: 47px;
+                margin: 0 0 10px;
+            }
+
+            p {
+
+            }
+            
+            &:last-child { 
+                border: 0;
+            }
+        }
+
+        
+
+    }
+}
+
+#servicios {
+    @include contenedor;
+    text-align: center;
+    padding: 70px 0;
+
+    h2 {
+        @include header(h2);
+    }
+
+    #los_servicios {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3,1fr);
+
+        article {
+
+            img {
+                width: 80px;
+                margin-bottom: 15px;
+            }
+
+            h3 {
+                color: $azul;
+            }
+
+            p {
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 19px;
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+#contactanos {
+    background: $gris;
+
+    #formulario_contacto {
+        @include contenedor;
+        text-align: center;
+        padding: 70px 0;
+    }
+
+    h2 {
+        @include header(h2);
+    }
+
+    form {
+        margin: 0 auto;
+        width: 80%;
+        display: grid; 
+        grid-gap:  15px; 
+        grid-template-columns: repeat(2,1fr); 
+        grid-template-areas:
+            "nombre         apellidos"
+            "asunto         asunto"
+            "mensaje        mensaje"
+            "boton_enviar   boton_enviar"
+        ; 
+
+
+        .nombre {
+            grid-area: nombre;
+            text-align: left;
+        }
+
+        .apellidos {
+            grid-area: apellidos;
+            text-align: left;
+        }
+
+        .asunto {
+            grid-area: asunto;
+            text-align: left;
+        }
+
+        .mensaje {
+            grid-area: mensaje;
+            text-align: left;
+        }
+
+        .boton_enviar {
+            grid-area: boton_enviar;
+            text-align: left;
+        }
+
+        article {
+            display: grid;
+            grid-template-columns: 90px 1fr;
+
+            label {
+                display: flex;
+                font-size: 16px;
+                align-items: center;
+            }
+            
+            input {
+                background: $blanco;
+                border: 1px solid rgba($gris_oscuro,.5);
+                padding: 15px;
+            }
+            
+            textarea {
+                background: $blanco;
+                border: 1px solid rgba($gris_oscuro,.5);
+                min-height: 100px;
+                padding: 15px;
+            }
+
+            &.mensaje {
+
+                label {
+                    display: flex;
+                    font-size: 16px;
+                    align-items: baseline;
+                    padding: 5px 0 0 0;
+                }
+            }
+            &.boton_enviar {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+

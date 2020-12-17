@@ -1,0 +1,21 @@
+
+// COLORES
+
+$negro:         #000000 !default;
+$gris:          #F8F8F8 !default;
+$gris_oscuro:   #B9B9B9 !default;
+$blanco:        #ffffff !default;
+$azul:          #0864B1 !default;
+
+$corporativo:   #C91158 !default;
+
+$link:          $corporativo !default;
+$link_hover:    rgba($corporativo,.8) !default;
+
+
+// PROPIEDADES BASE
+
+$size_base:             16px !default;
+$trazo_base:            1px !default;
+$sombra_base:           0 5px 5px rgba($negro, .5) !default;
+$input_border_radius:   5px !default;
